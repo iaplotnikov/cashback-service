@@ -3,6 +3,9 @@ jdk: oracal11
 
 script: mvn -e verify
 
+after_success:
+  - bash <(curl -s https://codcove.io/bash)
+
 notifications:
   email:
     recipients:
